@@ -271,3 +271,80 @@ ul>li {
     background: var(--red);
     color: var(--white)
 }
+
+.products {
+    margin-bottom: 160px;
+}
+
+.collections {
+    margin-bottom: 135px;
+}
+
+.collections__list {
+    display: flex;
+}
+
+.collections__item {
+    min-height: 474px;
+    flex: 1;
+    overflow: hidden;
+    margin-right: 30px;
+    background: url('./img/bg/pattern.png') center center / 500px;
+    position: relative;
+}
+
+.collections__item:last-child {
+    margin-right: 0;
+}
+
+.collections__item:before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 176%;
+    width: 60%;
+    top: -17%;
+    left: -18%;
+    background: center center / contain no-repeat;
+}
+
+.collections__item--type-guys:before {
+    background-image: url('/img/collections/collection_man.png');
+}
+
+.collections__item--type-girls:before {
+    background-image: url('/img/collections/collection_woman.png');
+    top: -31%;
+    width: 80%;
+    left: -25%;
+}
+
+.collections__link {
+    display: block;
+    padding: 74px 13% 74px 44%;
+    text-decoration: none;
+    color: inherit;
+    font-size: 15px;
+    position: relative;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.collections__link:hover .btn {
+    background: var(--red);
+    color: var(--white)
+}
+
+.collections__title {
+    font-family: var(--titlesFont);
+    font-size: 70px;
+    font-weight: bold;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 11px;
+}
+
+.collections__desc {
+    margin-bottom: 28px;
+}
