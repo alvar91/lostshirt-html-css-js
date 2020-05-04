@@ -1,13 +1,22 @@
 @font-face {
     font-family: 'alegreya';
     src: url('./fonts/alegreyasanssc-black-webfont.woff2') format('woff2'),
-         url('./fonts/alegreyasanssc-black-webfont.woff') format('woff');
+        url('./fonts/alegreyasanssc-black-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
 
-html, body {
+:root {
+    --yellow: #ffc92f;
+    --red: #d82727;
+    --black: #1b1b1b;
+    --titlesFont: 'Yanone Kaffeesatz', Arial, sans-serif;
+    --white: #fff;
+}
+
+html,
+body {
     margin: 0;
     height: 100%;
 }
@@ -24,8 +33,23 @@ body {
     min-width: 1310px;
 }
 
+.container {
+    margin: 0 auto;
+    width: 1300px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul>li {
+    list-style: none;
+}
+
 .hero {
     position: relative;
+    margin-bottom: 130px;
     height: 100vh;
     min-height: 650px;
     background: url('./img/bg/hero.jpg') center center / cover no-repeat;
@@ -48,7 +72,7 @@ body {
 .mail__content {
     padding: 5px 10px;
     background: #212121;
-    color: #ffbc2f;
+    color: var(--yellow);
     font-size: 16px;
 }
 
@@ -83,7 +107,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
     font-family: "alegreya", Arial, sans-serif;
-    color: #fff;
+    color: var(--white);
     font-size: 63px;
     text-transform: uppercase;
     line-height: 1;
@@ -96,9 +120,154 @@ body {
 }
 
 .lined-text__word--color-yellow {
-    color: #ffbc2f;
+    color: var(--yellow);
 }
 
 .lined-text__word:nth-child(2n) {
     margin-left: 8px;
+}
+
+.filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.filter__item {
+    margin-right: 40px;
+}
+
+.filter__item:last-child {
+    margin-right: 0;
+}
+
+.filter__link {
+    font-family: 'Yanone Kaffeesatz', Arial, sans-serif;
+    display: inline-block;
+    padding: 3px 21px;
+    text-transform: uppercase;
+    color: #1b1b1b;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.filter__link:hover {
+    color: var(--red);
+}
+
+.filter__item--active .filter__link {
+    color: var(--yellow);
+    background-color: var(--black);
+}
+
+.products__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -27px;
+}
+
+.products__item {
+    position: relative;
+    margin-bottom: 35px;
+    margin-left: 27px;
+    width: 302px;
+    height: 386px;
+    background: var(--yellow);
+}
+
+.products__price {
+    position: absolute;
+    top: 18px;
+    left: -6px;
+    width: 126px;
+    border-bottom: 45px solid #232323;
+    border-left: 5px solid transparent;
+    border-right: 2px solid transparent;
+    transform: rotate(-181deg);
+}
+
+.products__price-amount {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: var(--titlesFont);
+    color: var(--white);
+    transform: rotate(181deg);
+    position: absolute;
+    top: 2px;
+    right: 28px;
+}
+
+.products__item:hover .products__desc {
+    transform: translateY(0%);
+}
+
+.products__item--color-black {
+    background: #232323;
+}
+
+.products__item--color-black .products__price {
+    border-bottom-color: var(--yellow);
+}
+
+.products__item--color-black .products__price-amount {
+    color: #212121;
+}
+
+.products__item--size-double {
+    width: 630px;
+    height: 544px;
+}
+
+.products__content {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.products__desc {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 23px 30px;
+    background: rgba(35, 35, 35, .8);
+    font-size: 15px;
+    color: var(--white);
+    transform: translateY(100%);
+    transition: transform .5s;
+}
+
+.products__desc-text {
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.products__img {
+    display: block;
+    max-width: 90%;
+    max-height: 100%;
+}
+
+.btn {
+    display: inline-block;
+    text-transform: uppercase;
+    font-family: var(--titlesFont);
+    font-size: 24px;
+    padding: 2px 30px;
+    background: var(--black);
+    color: var(--yellow);
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: var(--red);
+    color: var(--white)
 }
