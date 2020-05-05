@@ -26,6 +26,7 @@ body {
     color: #212121;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background: #fcf5e6;
 }
 
 .wrapper {
@@ -348,3 +349,133 @@ ul>li {
 .collections__desc {
     margin-bottom: 28px;
 }
+
+.collections__desc {
+    margin-bottom: 28px;
+}
+
+.footer {
+    margin-bottom: 115px;
+}
+
+.footer__container {
+    width: 1105px;
+}
+
+.site-menu {
+    margin-bottom: 115px;
+}
+
+.site-menu__sections {
+    display: flex;
+    justify-content: space-between;
+}
+
+.site-menu__col {
+    margin-right: 20px;
+}
+
+.site-menu__col:last-child {
+    margin-right: 0;
+}
+
+.site-menu__title {
+    font-family: var(--titlesFont);
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--black);
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.site-menu__item {
+    margin-bottom: 15px;
+}
+
+.site-menu__link {
+    color: #737373;
+    font-size: 15px;
+    text-decoration: none;
+
+}
+
+.site-menu__link:hover {
+    color: var(--red); 
+}
+
+.site-menu__text {
+    font-size: 15px;
+    color: var(--black);
+    margin-bottom: 30px;
+}
+
+.site-menu__text-row {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.extras {
+    display: flex;
+    margin-bottom: 95px;
+}
+
+.extras__col {
+   margin-right: 20px;
+   flex: 1;
+}
+
+.extras__col:last-child {
+    margin-right: 0px; 
+ }
+
+ .extras__best {
+     text-align: center;
+     color: var(--white);
+     background: #232323;
+     font-size: 50px;
+     font-weight: bold;
+     font-family: var(--titlesFont);
+     text-transform: uppercase;
+     padding: 39px 10%;
+     display: block;
+     text-decoration: none;
+     line-height: 1;
+ }
+
+ .extras__col-socials {
+     height: 100%;
+     background: url('./img/bg/pattern.png') center center / 500px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .socials {
+     display: flex;
+ }
+
+ .socials__item {
+    margin-right: 50px; 
+ }
+
+ .socials__item:last-child {
+    margin-right: 0; 
+ }
+
+ .socials__link {
+     width: 38px;
+     height: 38px;
+     display: block;
+ }
+
+.socials__link:hover .socials__icon {
+    fill: var(--red);
+}
+
+ .socials__icon {
+     width: 100%;
+     height: 100%;
+ }
+ 
